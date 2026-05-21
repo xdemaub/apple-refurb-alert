@@ -11,7 +11,6 @@ def send(msg):
 
 def check():
     r = requests.get(URL)
-    if "M5" in r.text:
-        send("🚨 Un Mac M5 est dispo !")
+TEST OK - ton bot fonctionne
 
 check()
