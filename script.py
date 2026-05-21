@@ -15,7 +15,7 @@ def send(msg):
 def check():
     response = requests.get(URL)
     
-    if "M5" in response.text:
+    if "MacBook Air 13 pouces reconditionné avec puce Apple M5" in response.text:
         send(" MacBook M5 détecté sur Apple Refurb !\n https://www.apple.com/fr/shop/refurbished/mac")
         print("M5 trouvé")
     else:
