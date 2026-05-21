@@ -11,4 +11,4 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Test affichage
-        run: echo "✅ CA MARCHE"
+        run: echo " CA MARCHE"
