@@ -1,5 +1,14 @@
-- run: |
-    echo "=== LIST FILES ==="
-    ls -al
-    echo "=== RUN SCRIPT ==="
-    python script.py
+name: Test simple
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Test affichage
+        run: echo "✅ CA MARCHE"
