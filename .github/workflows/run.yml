@@ -1,22 +1,5 @@
-name: Run script
-
-on:
-  schedule:
-    - cron: "*/30 * * * *"
-  workflow_dispatch:
-
-jobs:
-  run:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
-
-      - run: pip install requests
-      - run: python script.py
-        env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          CHAT_ID: ${{ secrets.CHAT_ID }}
+- run: |
+    echo "=== LIST FILES ==="
+    ls -al
+    echo "=== RUN SCRIPT ==="
+    python script.py
