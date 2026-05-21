@@ -9,10 +9,14 @@ print("CHAT_ID =", CHAT_ID)
 
 url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
 
-response = requests.post(url, data={
-    "chat_id": CHAT_ID,
-    "text": "✅ TEST FINAL - ton bot fonctionne 🚀"
-})
+try:
+    response = requests.post(url, data={
+        "chat_id": CHAT_ID,
+        "text": "✅ TEST FINAL - BOT OK 🚀"
+    })
 
-print("RESPONSE =", response.text)
-``
+    print("STATUS CODE =", response.status_code)
+    print("RESPONSE =", response.text)
+
+except Exception as e:
+    print("ERROR =", e)
