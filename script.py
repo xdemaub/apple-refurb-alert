@@ -1,1 +1,1 @@
-print("HELLO TEST")
+print("🚀 SCRIPT EXECUTÉ AVEC SUCCÈS 🚀")
